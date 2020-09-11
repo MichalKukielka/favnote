@@ -1,13 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from 'views/Root/Root';
-import * as serviceWorker from './serviceWorker';
+import Root from 'views/Root';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Root />
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
-
-serviceWorker.unregister();
+ReactDOM.render(<Root />, document.getElementById('root'));
