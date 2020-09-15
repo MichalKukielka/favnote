@@ -99,7 +99,7 @@ class Card extends Component {
           <StyledHeading>{title}</StyledHeading>
           <DateInfo>{created}</DateInfo>
           {pageContext === 'twitters' && (
-            <StyledAvatar src={`https://avatars.io/twitter/${twitterName}`} />
+            <StyledAvatar src={`https://unavatar.now.sh/twitter/${twitterName}`} />
           )}
           {pageContext === 'articles' && <StyledLinkButton href={articleUrl} />}
         </InnerWrapper>
@@ -115,7 +115,7 @@ class Card extends Component {
 }
 
 Card.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.oneOfType(['string', 'number']),
   pageContext: PropTypes.oneOf(['notes', 'twitters', 'articles']),
   title: PropTypes.string.isRequired,
   created: PropTypes.string.isRequired,

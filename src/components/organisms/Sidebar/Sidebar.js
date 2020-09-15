@@ -48,7 +48,7 @@ const StyledLinksList = styled.ul`
 
 const Sidebar = ({ pageContext }) => (
   <StyledWrapper activeColor={pageContext}>
-    <StyledLogoLink to="/" />
+    <StyledLogoLink to="/notes" />
     <StyledLinksList>
       <li>
         <ButtonIcon as={NavLink} to="/notes" icon={penIcon} activeclass="active" />
